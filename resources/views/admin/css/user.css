@@ -1,0 +1,33 @@
+.table img{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+.card{
+
+border-radius:12px;
+
+}
+
+.btn{
+
+border-radius:8px;
+
+}
+
+.table td{
+
+vertical-align:middle;
+
+}
+
+.badge{
+    font-size:13px;
+}

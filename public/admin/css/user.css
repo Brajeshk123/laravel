@@ -1,0 +1,13 @@
+.user-table img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.badge-admin{
+    background:#0d6efd;
+}
+
+.badge-editor{
+    background:#198754;
+}

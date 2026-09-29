@@ -1,0 +1,57 @@
+.content-editor-wrap {
+    border: 1px solid #dfe3ea;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.content-editor-help {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.content-editor-wrap .tox.tox-tinymce {
+    border: 0;
+    border-radius: 0;
+    min-height: 500px;
+}
+
+.content-editor-wrap .tox .tox-menubar,
+.content-editor-wrap .tox .tox-toolbar,
+.content-editor-wrap .tox .tox-toolbar__overflow,
+.content-editor-wrap .tox .tox-toolbar__primary {
+    background: #f8fafc;
+}
+
+.content-editor-wrap .tox .tox-menubar {
+    border-bottom: 1px solid #e9edf3;
+}
+
+.content-editor-wrap .tox .tox-toolbar__primary {
+    border-bottom: 1px solid #e9edf3;
+}
+
+.content-editor-wrap .tox .tox-edit-area::before {
+    border-color: #0d6efd;
+    border-radius: 0;
+}
+
+.content-editor-wrap .tox .tox-statusbar {
+    border-top-color: #e9edf3;
+}
+
+.content-editor-wrap:focus-within {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.12);
+}
+
+@media (max-width: 767.98px) {
+    .content-editor-wrap .tox.tox-tinymce {
+        min-height: 420px;
+    }
+
+    .content-editor-wrap .tox .tox-toolbar__group {
+        padding-inline: 2px;
+    }
+}

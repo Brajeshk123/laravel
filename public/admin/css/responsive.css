@@ -1,0 +1,10 @@
+/* Admin responsive overrides */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    .row > .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
