@@ -8,11 +8,15 @@ body {
 
 .sidebar {
     width: 250px;
-    min-height: 100vh;
+    height: 100vh;
     background: #212529;
     position: fixed;
     left: 0;
     top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    scrollbar-gutter: stable;
 }
 
 .sidebar .logo {

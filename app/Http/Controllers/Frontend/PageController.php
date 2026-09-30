@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\ContactUs;
 use App\Models\Content;
 use App\Models\Menu;
 use App\Services\SettingService;
@@ -185,9 +186,13 @@ class PageController extends Controller
             'message' => ['required', 'string', 'max:3000'],
         ]);
 
+        ContactUs::create(array_merge($validated, [
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+        ]));
+
         return back()
-            ->withInput(['name' => $validated['name'], 'email' => $validated['email']])
-            ->with('status', 'Thanks, your message has been validated. Email delivery is not configured yet.');
+            ->with('status', 'Thanks, your message has been sent successfully.');
     }
 
     private function frontendView(string $view, array $data = [], array $seo = [])

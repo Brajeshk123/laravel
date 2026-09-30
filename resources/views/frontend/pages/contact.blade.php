@@ -8,7 +8,7 @@
                 <div class="col-lg-9" data-reveal>
                     <div class="section-kicker mb-2">Contact</div>
                     <h1 class="hero-title mb-3">Start with a signal, not a generic form.</h1>
-                    <p class="hero-lead mb-0">The form validates safely today and can be connected to mail delivery when configuration is ready.</p>
+                    <p class="hero-lead mb-0">Send your details and we will get back to you soon.</p>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <button class="btn btn-primary" type="submit">Validate Message</button>
+                                        <button class="btn btn-primary" type="submit">Send Message</button>
                                     </div>
                                 </div>
                             </form>

@@ -213,6 +213,8 @@ img {
     border: 1px solid var(--border);
     color: var(--text);
     min-width: 165px;
+    min-height: 44px;
+    padding: 0.55rem 1rem;
 }
 
 .header-search::placeholder {
@@ -234,18 +236,13 @@ img {
     transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, background-color 0.22s ease;
 }
 
-.btn::after {
-    content: "->";
-    font-weight: 700;
-    transition: transform 0.22s ease;
-}
-
 .btn:hover {
     transform: translateY(-2px);
 }
 
-.btn:hover::after {
-    transform: translateX(4px);
+.site-header .btn {
+    min-height: 44px;
+    padding: 0.55rem 1rem;
 }
 
 .btn-primary {

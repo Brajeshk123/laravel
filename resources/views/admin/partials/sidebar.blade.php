@@ -90,6 +90,14 @@
         </a>
     @endcan
 
+    @can('view contacts')
+        <a href="{{ route('admin.contacts.index') }}"
+            class="{{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
+            <i class="bi bi-dot"></i>
+            Contact Entries
+        </a>
+    @endcan
+
     @can('manage settings')
         <a href="{{ route('admin.settings.index') }}"
             class="{{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">

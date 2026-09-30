@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MediaController;
@@ -176,6 +177,18 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::delete('media/{medium}', [MediaController::class, 'destroy'])
         ->middleware('permission:delete media')
         ->name('media.destroy');
+    Route::get('contacts', [ContactUsController::class, 'index'])
+        ->middleware('permission:view contacts')
+        ->name('contacts.index');
+    Route::get('contacts/{contact}', [ContactUsController::class, 'show'])
+        ->middleware('permission:view contacts')
+        ->name('contacts.show');
+    Route::patch('contacts/{contact}/mark-unread', [ContactUsController::class, 'markUnread'])
+        ->middleware('permission:view contacts')
+        ->name('contacts.mark-unread');
+    Route::delete('contacts/{contact}', [ContactUsController::class, 'destroy'])
+        ->middleware('permission:delete contacts')
+        ->name('contacts.destroy');
     Route::get('/settings', [SettingController::class, 'index'])
         ->middleware('permission:manage settings')
         ->name('settings.index');
